@@ -1,14 +1,7 @@
 {
-  "dependencies": {},
-  "description": "Project containing your PowerApps Component Framework (PCF) control.",
-  "devDependencies": {
-    "@types/node": "16.4",
-    "@types/powerapps-component-framework": "1.3.0",
-    "pcf-scripts": "1",
-    "pcf-start": "1",
-    "typescript": "4.3"
-  },
   "name": "pcf-project",
+  "version": "1.0.0",
+  "description": "Project containing your PowerApps Component Framework (PCF) control.",
   "scripts": {
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",
@@ -16,5 +9,12 @@
     "refreshTypes": "pcf-scripts refreshTypes",
     "start": "pcf-scripts start"
   },
-  "version": "1.0.0"
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "16.4",
+    "@types/powerapps-component-framework": "1.3.0",
+    "pcf-scripts": "1",
+    "pcf-start": "1",
+    "typescript": "4.3"
+  }
 }
