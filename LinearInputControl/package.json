@@ -1,28 +1,41 @@
 {
-  "name": "pcf-project",
-  "version": "1.0.0",
-  "description": "Project containing your PowerApps Component Framework (PCF) control.",
-  "scripts": {
-    "build": "pcf-scripts build",
-    "clean": "pcf-scripts clean",
-    "rebuild": "pcf-scripts rebuild",
-    "start": "pcf-scripts start",
-    "refreshTypes": "pcf-scripts refreshTypes"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
-    "@types/node": "20.11",
-    "@types/powerapps-component-framework": "1.3.11",
-    "@typescript-eslint/eslint-plugin": "7.3.1",
-    "@typescript-eslint/parser": "7.3.1",
-    "eslint": "8.57.0",
-    "eslint-config-standard": "17.1.0",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "6.1.1",
-    "pcf-scripts": "1",
-    "pcf-start": "1",
-    "typescript": "5.4"
-  }
+	"name": "pcf-project",
+	"version": "0.0.1",
+	"private": false,
+	"description": "Project containing your PowerApps Component Framework (PCF) control.",
+	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Playform",
+		"email": "Hello@Playform.Cloud",
+		"url": "https://playform.cloud"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "pcf-scripts build",
+		"clean": "pcf-scripts clean",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"rebuild": "pcf-scripts rebuild",
+		"refreshTypes": "pcf-scripts refreshTypes",
+		"start": "pcf-scripts start"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@types/node": "20.11",
+		"@types/powerapps-component-framework": "1.3.11",
+		"pcf-scripts": "1",
+		"pcf-start": "1",
+		"typescript": "5.4",
+		"typescript-esbuild": "latest"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
