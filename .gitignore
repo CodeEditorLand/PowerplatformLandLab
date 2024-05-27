@@ -1,4 +1,5 @@
 # nodejs packages
+node_modules/
 
 # dotnet / MSBuild artifacts
 obj/
