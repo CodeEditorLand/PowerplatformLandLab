@@ -1,1 +1,9 @@
-[{"TemplateId":"dynamichosturl","Title":"Route to keyvault","Parameters":{"x-ms-apimTemplateParameter.urlTemplate":"https://@connectionParameters('keyVaultName').vault.azure.net"}}]
+[
+	{
+		"TemplateId": "dynamichosturl",
+		"Title": "Route to keyvault",
+		"Parameters": {
+			"x-ms-apimTemplateParameter.urlTemplate": "https://@connectionParameters('keyVaultName').vault.azure.net"
+		}
+	}
+]
