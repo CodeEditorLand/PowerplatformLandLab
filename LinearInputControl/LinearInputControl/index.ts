@@ -12,13 +12,11 @@
 
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-export class LinearInputControl
-	implements ComponentFramework.StandardControl<IInputs, IOutputs>
-{
-	// Value of the field is stored and used inside the control
+export class LinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+	// Value of the field is stored and used inside the control 
 	private _value: number;
 
-	// PCF framework delegate which will be assigned to this object which would be called whenever any update happens.
+	// PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
 	private _notifyOutputChanged: () => void;
 
 	// label element created as part of this control
@@ -51,16 +49,12 @@ export class LinearInputControl
 	 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
 	 * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
 	 */
-	public init(
-		context: ComponentFramework.Context<IInputs>,
-		notifyOutputChanged: () => void,
-		state: ComponentFramework.Dictionary,
-		container: HTMLDivElement,
-	): void {
+	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement): void {
 		this._context = context;
 		this._container = document.createElement("div");
 		this._notifyOutputChanged = notifyOutputChanged;
 		this._refreshData = this.refreshData.bind(this);
+
 
 		// creating HTML elements for the input type range and binding it to the function which refreshes the control data
 		this.inputElement = document.createElement("input");
@@ -80,15 +74,8 @@ export class LinearInputControl
 
 		// retrieving the latest value from the control and setting it to the HTMl elements.
 		this._value = context.parameters.controlValue.raw!;
-		this.inputElement.setAttribute(
-			"value",
-			context.parameters.controlValue.formatted
-				? context.parameters.controlValue.formatted
-				: "0",
-		);
-		this.labelElement.innerHTML = context.parameters.controlValue.formatted
-			? context.parameters.controlValue.formatted
-			: "0";
+		this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0");
+		this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0";
 
 		// appending the HTML elements to the control's HTML container element.
 		this._container.appendChild(this.inputElement);
@@ -101,7 +88,7 @@ export class LinearInputControl
 	 * @param evt : The "Input Properties" containing the parameters, control metadata and interface functions
 	 */
 	public refreshData(evt: Event): void {
-		this._value = this.inputElement.value as any as number;
+		this._value = (this.inputElement.value as any) as number;
 		this.labelElement.innerHTML = this.inputElement.value;
 		this._notifyOutputChanged();
 	}
@@ -114,28 +101,21 @@ export class LinearInputControl
 		// storing the latest context from the control.
 		this._value = context.parameters.controlValue.raw!;
 		this._context = context;
-		this.inputElement.setAttribute(
-			"value",
-			context.parameters.controlValue.formatted
-				? context.parameters.controlValue.formatted
-				: "",
-		);
-		this.labelElement.innerHTML = context.parameters.controlValue.formatted
-			? context.parameters.controlValue.formatted
-			: "";
+		this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "");
+		this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "";
 	}
 
-	/**
-	 * It is called by the framework prior to a control receiving new data.
+	/** 
+	 * It is called by the framework prior to a control receiving new data. 
 	 * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
 	 */
 	public getOutputs(): IOutputs {
 		return {
-			controlValue: this._value,
+			controlValue: this._value
 		};
 	}
 
-	/**
+	/** 
 	 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
 	 * i.e. cancelling any pending remote calls, removing listeners, etc.
 	 */
