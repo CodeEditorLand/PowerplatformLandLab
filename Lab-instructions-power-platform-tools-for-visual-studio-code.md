@@ -84,7 +84,7 @@ or you will see the following in your native VS Code instance.
 To install the extension, follow these steps.
 
 1\) Navigate your browser to the following URL:
-<https://marketplace.visualstudio.com/>
+<HTTPS://marketplace.visualstudio.com/>
 
 2\) Select the **Visual Studio Code** tab, search for Power Platform, and select
 the extension as shown below
@@ -184,7 +184,7 @@ example, we are using the device code authentication flow.
 To start the authentication flow, follow these steps.
 
 1.  Launch a browser session and navigate to the URL
-    <https://microsoft.com/devicelogin>
+    <HTTPS://microsoft.com/devicelogin>
 
 2.  Provide the device code.
 
@@ -243,7 +243,7 @@ Now that we have installed the extension and authenticated to the environment,
 we are going to work with solutions using the Visual Studio Code user interface.
 
 1.  Download the compressed .zip files that you need for this project from the
-    [`GitHub repository`](https://github.com/microsoft/powerplatform-vscode-lab).
+    [`GitHub repository`](HTTPS://github.com/microsoft/powerplatform-vscode-lab).
     This compressed zip file contains a solution and a PCF control that we are
     going to use for this project.
 
