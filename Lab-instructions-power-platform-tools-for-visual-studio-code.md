@@ -243,7 +243,7 @@ Now that we have installed the extension and authenticated to the environment,
 we are going to work with solutions using the Visual Studio Code user interface.
 
 1.  Download the compressed .zip files that you need for this project from the
-    [`GitHub repository`](HTTPS://github.com/microsoft/powerplatform-vscode-lab).
+    [`GitHub repository`](https://github.com/microsoft/powerplatform-vscode-lab).
     This compressed zip file contains a solution and a PCF control that we are
     going to use for this project.
 
